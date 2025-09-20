@@ -1,0 +1,126 @@
+/* Reset some defaults */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #0f2027, #2c5364);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar .logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar .logo:hover {
+  color: #ffd700;
+}
+
+/* Menu */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-links a:hover,
+.navbar-links .logout-btn:hover {
+  background: #ffd700;
+  color: #222;
+}
+
+/* Logout button special */
+.logout-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.logout-btn:hover {
+  background: #d90429;
+  color: #fff;
+}
+
+/* ===== Mobile Responsive ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0f2027, #2c5364);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .navbar-links.active {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+  .navbar-links a,
+  .navbar-links .logout-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+}
