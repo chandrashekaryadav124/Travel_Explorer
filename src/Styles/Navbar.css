@@ -1,4 +1,9 @@
 /* Reset some defaults */
+body{
+  margin: 0;
+  background: #f4f6f8;
+  color: #333;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -22,21 +27,21 @@
 }
 
 .navbar .logo:hover {
-  color: #ffd700;
+  color: #eee5b2;
 }
 
 /* Menu */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
 .navbar-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding: 0.4rem 1rem;
   border-radius: 4px;
   transition: background 0.2s, color 0.2s;
@@ -124,3 +129,4 @@
     margin: 0;
   }
 }
+
