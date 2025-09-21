@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoute";
-import Navbar from "./component/navbar";
+import Navbar from "./component/Navbar";
 import Footer from "./component/footer";
 
 import Home from "./pages/Home";
