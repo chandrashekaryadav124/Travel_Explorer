@@ -1,0 +1,172 @@
+/* --- General Container --- */
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #f59e0b;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #fbbf24;
+}
+
+/* --- Featured Destinations --- */
+.featured {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f0f4ff;
+}
+
+.featured h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.destination-info {
+  padding: 1rem;
+}
+
+.destination-info h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.3rem;
+}
+
+.destination-info p {
+  color: #555;
+  margin: 0;
+}
+
+/* --- About Section --- */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- Testimonials --- */
+.testimonials {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f0f4ff;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 300px;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+  color: #1e3a8a;
+  margin: 0;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

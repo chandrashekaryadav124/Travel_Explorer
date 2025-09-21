@@ -21,10 +21,11 @@ function Navbar() {
       {/* Links */}
       <div className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/booking" onClick={() => setMenuOpen(false)}>Booking</Link>
-        <Link to="/favourites" onClick={() => setMenuOpen(false)}>Favourites</Link>
+        <Link to="/explore" onClick={() => setMenuOpen(false)}>Explore</Link>
+        <Link to="/booking" onClick={() => setMenuOpen(false)}>myBooking</Link>
+        
         <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-        <Link to="/testimonials" onClick={() => setMenuOpen(false)}>Testimonials</Link>
+      
 
         {user ? (
           <>
