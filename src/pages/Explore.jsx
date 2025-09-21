@@ -1,6 +1,6 @@
 // Explore.jsx
 import React, { useState } from 'react';
-import '../Styles/explore.css';
+import '../Styles/Explore.css';
 
 const Explore = () => {
   const [searchTerm, setSearchTerm] = useState('');
